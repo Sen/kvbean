@@ -5,6 +5,8 @@ class Post
 
   kv_field :title, :content, :another_content
 
+  validates_presence_of :title
+
   private
 
   def set_content

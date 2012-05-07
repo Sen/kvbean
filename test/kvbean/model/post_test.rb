@@ -24,4 +24,16 @@ class PostTest < ActiveSupport::TestCase
     assert_equal post.another_content, 'i am another content'
   end
 
+  test "validations(presence)" do
+    post = Post.new
+    post.title = nil
+    assert_not post.valid?
+    assert_not_blank post.errors.messages
+
+    post = Post.new
+    post.title = nil
+    post.save
+    assert_not_blank post.errors.messages
+  end
+
 end
