@@ -93,6 +93,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel
   kvbean!
   mocha
   redis

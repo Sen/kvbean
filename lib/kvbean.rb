@@ -1,3 +1,5 @@
+require 'redis'
+
 $:.unshift(File.dirname(__FILE__))
 require "kvbean/ext/array"
 

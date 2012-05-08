@@ -1,7 +1,7 @@
 Kvbean
 ======
 
-Make redis on rails easier
+Make redis on rails life easier
 
 Install
 -------
@@ -9,7 +9,7 @@ Install
 put this code in Gemfile
 
 ```ruby
-  gem 'kvbean'
+gem 'kvbean'
 ```
 
 
