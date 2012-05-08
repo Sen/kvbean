@@ -24,7 +24,26 @@ class Message
 end
 
 Message.create(title: 'i am title', content: 'i am content')
-# => {}
+
+Message.find_by_title('i am title')
+Message.find_all_by_title('i am title')
+
+message = Message.find_or_create_by_title('i am title')
+
+message.id # => 7b4cfa9a1426b5fad5c8cd17aa
+message.exists? # => true, alias: persisted?,
+message.new_record? # => false
+message.created_at # => Tue, 08 May 2012 09:54:20 UTC +00:00
+message.updated_at # => Tue, 08 May 2012 09:54:20 UTC +00:00
+message.update_attributes(title: 'new title')
+message.title # => new title
+Message.count # => 1
+
+Message.first
+message.last
+
+message.destroy
+Message.destroy_all
 
 message = Message.new(title: 'i am title', content: 'i am content')
 message.save
