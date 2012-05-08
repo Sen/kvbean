@@ -23,6 +23,10 @@ module Kvbean
         end
       end
 
+      def kv_namespace(namespace)
+        @namespace = namespace.to_s
+      end
+
       def collection(&block)
         @collection ||= Class.new(Array)
         @collection.class_eval(&block) if block_given?

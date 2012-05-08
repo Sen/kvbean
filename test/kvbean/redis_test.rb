@@ -10,6 +10,18 @@ class Kvmodel
   end
 end
 
+class Nsmodel
+  include Kvbean::Base
+
+  kv_namespace :ns
+
+  kv_field :content
+
+  def id
+    1
+  end
+end
+
 class KvmodelTest < ActiveSupport::TestCase
 
   setup do
@@ -24,6 +36,7 @@ class KvmodelTest < ActiveSupport::TestCase
 
   test "namespace" do
     assert_equal Kvmodel.namespace, 'kvmodel'
+    assert_equal Nsmodel.namespace, 'ns'
   end
 
   test "set namespace" do
