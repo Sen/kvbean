@@ -40,7 +40,7 @@ message.title # => new title
 Message.count # => 1
 
 Message.first
-message.last
+Message.last
 
 message.destroy
 Message.destroy_all
