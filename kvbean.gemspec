@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
   s.version     = Kvbean::VERSION
   s.authors     = ["Sen"]
   s.email       = ["sen9ob@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Kvbean."
-  s.description = "TODO: Description of Kvbean."
+  s.homepage    = "https://github.com/Sen/kvbean"
+  s.summary     = "Redis on ActiveRecord"
+  s.description = "Make redis on rails easier"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.3"
