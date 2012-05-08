@@ -1,8 +1,20 @@
-= Kvbean
+Kvbean
+======
 
-This project rocks and uses MIT-LICENSE.
+Make redis on rails easier
 
-= Usage
+Install
+-------
+
+put this code in Gemfile
+
+```ruby
+  gem 'kvbean'
+```
+
+
+Usage
+-----
 
 ```ruby
 class Message
@@ -17,7 +29,8 @@ message = Message.new(title: 'i am title', content: 'i am content')
 message.save
 ```
 
-= callbacks
+Callbacks
+---------
 
 ```ruby
 class Message
@@ -35,7 +48,9 @@ class Message
 end
 ```
 
-= validations
+Validations
+-----------
+
 ```ruby
 class Message
   include Kvbean::Base
